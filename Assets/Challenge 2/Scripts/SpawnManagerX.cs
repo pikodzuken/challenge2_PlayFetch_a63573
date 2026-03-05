@@ -16,13 +16,12 @@ public class SpawnManagerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
         InvokeRepeating("RandomDelay", startDelay, 3);
     }
 // Randomizing ball spawn time
 void RandomDelay()
 {
-    float randomInterval = Random.Range(0, 3);
+    float randomInterval = Random.Range(3, 5);
     Invoke("SpawnRandomBall", randomInterval);
 }
 // Spawn random ball at random x position at top of play area
